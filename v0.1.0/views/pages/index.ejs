@@ -1,0 +1,89 @@
+<h2><%= message %></h2>
+<section class="info-card" aria-labelledby="tool-title">
+    <h1 id="tool-title">Verify PDF Certificates</h1>
+    <p class="lead">
+        This tool helps you confirm whether a digital certificate (PDF) is genuine.
+        Each certificate contains cryptographic proof anchored on the blockchain, so
+        the system can check authenticity, integrity and validity without storing your file.
+    </p>
+
+    <ul class="checks">
+        <li><strong>Issuer check [manually]:</strong> Confirm the certificate was issued by a trusted organization.</li>
+        <li><strong>Integrity check:</strong> Ensures the PDF content matches the record stored on the blockchain (not tampered).</li>
+        <li><strong>Validity check:</strong> Verifies whether the certificate is still valid or has expired.</li>
+    </ul>
+
+    <p class="note">
+        Your PDF is processed <strong>only in memory</strong> (converted to Base64) and never saved to disk. Results are displayed instantly.
+    </p>
+
+    <div class="cta-row">
+        <a class="primary-btn" href="/verifier">Upload PDF</a>
+
+        <a class="secondary-btn" href="/learn-more">How it works</a>
+    </div>
+</section>
+
+<style>
+    .info-card{
+        max-width:820px;
+        margin:32px auto;
+        padding:22px;
+        border-radius:10px;
+        background:linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+        box-shadow:0 6px 18px rgba(28,40,80,0.06);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        color:#1c2a3a;
+    }
+    .info-card h1{
+        margin:0 0 8px 0;
+        font-size:1.6rem;
+        line-height:1.2;
+    }
+    .info-card .lead{
+        margin:6px 0 16px 0;
+        color:#334155;
+    }
+    .info-card .checks{
+        margin:0 0 16px 0;
+        padding-left:18px;
+        color:#243142;
+    }
+    .info-card .checks li{
+        margin:8px 0;
+    }
+    .info-card .note{
+        margin:12px 0 18px 0;
+        font-size:0.95rem;
+        color:#334155;
+    }
+    .cta-row{
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+    }
+    .primary-btn, .secondary-btn{
+        display:inline-block;
+        padding:10px 16px;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:600;
+        font-size:0.95rem;
+    }
+    .primary-btn{
+        background:#0b66ff;
+        color:#fff;
+        box-shadow:0 6px 14px rgba(11,102,255,0.18);
+    }
+    .primary-btn:focus, .primary-btn:hover{ transform:translateY(-1px); }
+    .secondary-btn{
+        background:transparent;
+        color:#0b66ff;
+        border:1px solid rgba(11,102,255,0.12);
+    }
+    @media (max-width:520px){
+        .info-card{ padding:18px; margin:18px; }
+        .cta-row{ justify-content:center; }
+    }
+</style>
+

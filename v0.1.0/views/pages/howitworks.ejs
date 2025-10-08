@@ -1,0 +1,46 @@
+<section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <p>
+        Each certified PDF contains embedded metadata with certification information.
+        This ensures the document's authenticity and integrity.
+    </p>
+
+    <div class="steps">
+        <div class="step">
+            <h3>1. Certificates Aggregation</h3>
+            <p>
+                Multiple certificates are combined into a <strong>Merkle Tree</strong>.
+                Each leaf of the tree represents a single certificate.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3>2. Blockchain Anchoring</h3>
+            <p>
+                The <strong>Merkle Root</strong> of the tree is stored on the blockchain
+                through a transaction. This guarantees immutability and tamper-proof verification.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3>3. Metadata in the PDF</h3>
+            <p>
+                Each individual PDF certificate contains the following metadata:
+            </p>
+            <ul>
+                <li><strong>Issuer:</strong> name and wallet of the issuer in order to identify it</li>
+                <li><strong>Blockchain:</strong> the blockchain network used</li>
+                <li><strong>Transaction hash:</strong> the blockchain transaction storing the Merkle root</li>
+                <li><strong>Transaction timestamp: </strong>when the transaction was accepted by the network</li>
+                <li><strong>Merkle proof:</strong> the proof that this certificate is part of the Merkle tree</li>
+                <li><strong>Expiration:</strong> if the certificate is meant to expire or not</li>
+                <li><strong>Version: </strong> version of the mechanism to certify the PDFs</li>
+            </ul>
+            <p>
+                When you upload a certificate to our verifier, these metadata are used to confirm
+                its authenticity in real-time.
+            </p>
+        </div>
+    </div>
+</section>

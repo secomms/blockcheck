@@ -1,0 +1,14 @@
+<div class="upload-section">
+    <h2>Upload and Verify Your Certificate</h2>
+    <p class="subtitle">
+        Upload a <strong>PDF certificate</strong> to verify its authenticity on the blockchain.
+        Your file is processed securely in memory — never stored or shared.
+    </p>
+
+
+    <form action="/uploadAndVerify" method="POST" enctype="multipart/form-data" class="upload-form">
+        <label for="pdfFile" class="file-label">Choose PDF File</label>
+        <input id="pdfFile" type="file" name="pdfFile" accept="application/pdf" required>
+        <button type="submit" class="upload-btn">Verify PDF</button>
+    </form>
+</div>

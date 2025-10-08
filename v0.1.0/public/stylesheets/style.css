@@ -1,0 +1,468 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+}
+
+/* Center the content vertically and horizontally */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    padding: 20px;
+}
+
+/* Title and subtitle */
+.upload-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.upload-section .subtitle {
+    max-width: 480px;
+    margin-bottom: 24px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Result box (message) */
+.result-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 500px;
+    color: #0f172a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Upload form */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* File input styling */
+.file-label {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.upload-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #f8fafc;
+}
+
+/* Button */
+.upload-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.upload-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+    .upload-section h2 {
+        font-size: 1.5rem;
+    }
+    .upload-form {
+        padding: 18px;
+    }
+}
+
+
+.verification-card {
+    background: #ffffff;
+    max-width: 780px;
+    margin: 40px auto;
+    padding: 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+}
+
+.verification-card h3 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    color: #0f172a;
+}
+
+.verification-status {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge.valid {
+    background: #22c55e;
+}
+
+.badge.invalid {
+    background: #ef4444;
+}
+
+.badge.neutral {
+    background: blue;
+}
+
+.badge.expired {
+    background: #f59e0b;
+}
+
+/* Table styling */
+.verification-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+.verification-table th,
+.verification-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.verification-table th {
+    width: 240px;
+    font-weight: 600;
+    color: #334155;
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+.verification-table td {
+    color: #1e293b;
+}
+
+.verification-table a {
+    color: #2563eb;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.verification-table a:hover {
+    text-decoration: underline;
+}
+
+.verification-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .verification-card {
+        padding: 20px;
+    }
+    .verification-table th {
+        display: block;
+        width: 100%;
+        background: transparent;
+        border-right: none;
+        padding-top: 12px;
+    }
+    .verification-table td {
+        display: block;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+}
+
+
+/* Header */
+.app-header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Header content layout */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo e titolo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 100px;  /* logo grande */
+    width: 100px;
+    object-fit: contain;
+}
+
+.title-container h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.version {
+    display: block;
+    font-size: 1rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* Navigazione */
+.nav-links a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 24px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Linea orizzontale */
+.app-header hr {
+    border: none;
+    border-top: 2px solid #e2e8f0;
+    margin-top: 16px;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .logo {
+        height: 120px; /* anche più grande su mobile se vuoi */
+        width: 120px;
+    }
+    .nav-links a {
+        margin-left: 12px;
+    }
+}
+.app-footer {
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 20px 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #475569;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.footer-content a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    margin: 4px 0;
+}
+
+
+.issuer-info-btn {
+    background: transparent;
+    border: none;
+    margin-left: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #2563eb;
+}
+
+.issuer-info-btn:hover {
+    color: #0b4ed0;
+}
+
+.issuer-popover {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 6px;
+    z-index: 100;
+}
+
+.issuer-popover p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #1e293b;
+}
+
+.close-popover {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    float: right;
+    cursor: pointer;
+    color: #ef4444;
+}
+
+.issuer-info-box {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-top: 16px;
+    max-width: 700px;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+.issuer-info-box h4 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    color: #0f172a;
+}
+
+.issuer-info-box p {
+    margin: 0;
+    line-height: 1.5;
+    color: #334155;
+}
+
+
+.how-it-works {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+}
+
+.how-it-works h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #0f172a;
+}
+
+.how-it-works p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #334155;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.step ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 8px;
+    color: #334155;
+}
+
+.step ul li {
+    margin-bottom: 6px;
+}
+
+/* Optional: highlight important words */
+.step strong {
+    color: #2563eb;
+}
+
+.error-card {
+    background-color: #fef2f2; /* light red */
+    border: 1px solid #fca5a5;
+    padding: 20px 24px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    color: #b91c1c;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.error-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+}
+
+.error-card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}

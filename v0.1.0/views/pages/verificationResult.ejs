@@ -1,0 +1,69 @@
+<% if (message) { %>
+    <section class="verification-card">
+        <h3>Verification Result</h3>
+
+        <% if (typeof message === 'object' && message.info) { %>
+            <div class="verification-status">
+                <span class="badge issuer neutral%>">
+                  Issuer: <%= message.issuer %>
+                </span>
+                        <span class="badge doc <%= message.doc !== 'Invalid' ? 'valid' : 'invalid' %>">
+                  Document: <%= message.doc %>
+                </span>
+                        <span class="badge expires <%= message.expires.includes('valid') ? 'valid' : 'expired' %>">
+                  Status: <%= message.expires %>
+                </span>
+            </div>
+            <div class="issuer-info-box">
+                <h4>About the Issuer</h4>
+                <p>
+                    The issuer is the organization that issued this certificate.
+                    Check its declared wallet and compare it with the one showed here below
+                </p>
+            </div>
+
+            <table class="verification-table">
+                <tbody>
+                <tr>
+                    <th>Certificate version</th>
+                    <td><%= message.info.version %></td>
+                </tr>
+                <tr>
+                    <th>Github - Verification script</th>
+                    <td>
+                        <a href="<%= message.info.verificationScript %>" target="_blank" rel="noopener noreferrer">
+                            <%= message.info.verificationScript %>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Certificate expires</th>
+                    <td><%= message.info.attestato_scade %></td>
+                </tr>
+                <tr>
+                    <th>Blockchain</th>
+                    <td><%= message.info.blockchain %></td>
+                </tr>
+                <tr>
+                    <th>Wallet</th>
+                    <td><%= message.info.wallet %></td>
+                </tr>
+                <tr>
+                    <th>Transaction hash</th>
+                    <td>
+                        <a href="https://etherscan.io/tx/<%= message.info.hash_transazione %>" target="_blank" rel="noopener noreferrer">
+                            <%= message.info.hash_transazione %>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Transaction timestamp</th>
+                    <td><%= message.info.timestamp_transazione %></td>
+                </tr>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="verification-message"><%= message %></p>
+        <% } %>
+    </section>
+<% } %>
